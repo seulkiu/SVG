@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곡선을 따라 글자 쓰기</title>
+    <style>
+        body{
+            margin:0;
+        }
+        .svg{
+            position: absolute;
+            width:100%;
+            height:100%;
+            background: #ddd;
+        }
+        text{
+            font-size: 1.5rem;
+            font-weight: bold;
+            /* color */
+            fill: red;
+        }
+        path{
+            stroke: red;
+            fill: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg">
+        <defs><!--나중에 참조할 그래픽 요소같은 것들을 담아놓는 공간-->
+            <path id="text-curve" d="M 50 400 C 50 400, 300 500, 400 400 C 400 400, 600 170, 700 300"></path>
+        </defs>
+        <text x="20" y="50">
+            <textPath href="#text-curve">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem dicta, quibusdam eligendi itaque fugiat tenetur deleniti. Saepe, nulla pariatur sequi, quisquam quidem, vero eligendi incidunt magnam officiis omnis quaerat dolorum?
+            </textPath>
+        </text>
+    </svg>
+</body>
+</html>
