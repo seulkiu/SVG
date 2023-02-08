@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 585.19 711.06">
+    <defs>
+        <linearGradient id="hair-color">
+            <stop offset="0%" stop-color="yellow"/>
+            <stop offset="50%" stop-color="hotpink"/>
+            <stop offset="100%" stop-color="deepskyblue"/>
+        </linearGradient>
+        <!--radialGradient-->
+        <style>
+            <![CDATA[ 
+            .hair{
+                fill:url('#hair-color'); 
+            }
+            ]]>
+        </style>
+    </defs>
+    <circle cx="300.58" cy="426.45" r="264.61"
+        style="stroke-width:40px;fill:none;stroke:#231f20;stroke-miterlimit:10" />
+    <circle cx="182.58" cy="426.45" r="32.67" class="cls-3" />
+    <circle cx="418.58" cy="426.45" r="32.67" class="cls-3" />
+    <path d="M445.53 549.07c-35.61 39.79-87.35 64.83-144.95 64.83-57.6 0-109.34-25.04-144.95-64.83"
+        style="fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:30px" />
+    <g class="hair">
+        <ellipse cx="165.12" cy="226.45" rx="165.12" ry="96" />
+        <ellipse cx="418.58" cy="176.39" rx="158.73" ry="134.06" />
+        <ellipse cx="244.88" cy="118.56" rx="152.04" ry="118.56" />
+    </g>
+</svg>
