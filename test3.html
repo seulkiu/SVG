@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>자바스크립트 적용하기</title>
+<style>
+    .cls-1 {
+    stroke-width: 30px;
+    }
+
+    .cls-1,
+    .cls-2 {
+    fill: none;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+    }
+
+    .cls-3 {
+    fill: #231f20;
+    }
+
+    .cls-2 {
+    stroke-width: 40px;
+    }
+    .face {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    margin: auto;
+    }
+    .face__hair {
+    fill: brown;
+    }
+    .face__hair:nth-of-type(1) {
+    fill: blue;
+    }
+    @keyframes eye-ani {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+    }
+
+    .face__eye:nth-of-type(2) {
+    transform-origin: 182.58px 426.45px;
+    }
+    .face__eye:nth-of-type(3) {
+    transform-origin: 418.58px 426.45px;
+    }
+    .ani-on .face__eye{ 
+        animation: eye-ani 1s infinite alternate;
+    }
+</style>
+</head>
+<body>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="face" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585.19 711.06">
+    <defs></defs>
+    <circle class="cls-2" cx="300.58" cy="426.45" r="264.61" />
+    <circle class="face__eye" cx="182.58" cy="426.45" r="32.67" />
+    <circle class="face__eye" cx="418.58" cy="426.45" r="32.67" />
+    <path class="cls-1" d="m445.53,549.07c-35.61,39.79-87.35,64.83-144.95,64.83-57.6,0-109.34-25.04-144.95-64.83" />
+    <ellipse class="face__hair" cx="165.12" cy="226.45" rx="165.12" ry="96" />
+    <ellipse class="face__hair" cx="418.58" cy="176.39" rx="158.73" ry="134.06" />
+    <ellipse class="face__hair" cx="244.88" cy="118.56" rx="152.04" ry="118.56" />
+</svg>
+
+<script>
+    const faceElem = document.querySelector('.face');
+    faceElem.addEventListener('click', function(){
+        this.classList.toggle('ani-on');
+    });
+</script>
+</body>
+</html>
