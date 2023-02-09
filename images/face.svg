@@ -19,10 +19,20 @@
       .cls-2 {
         stroke-width: 40px;
       }
+
+      @keyframes eye-ani{
+        from  {transform: scaleY(1);}
+        to { transform: scaleY(0.2);}
+      }
+      .right-eye{
+        transform-origin: center center ;
+        animation: eye-ani 0.5s alternate infinite;
+      }
+
     </style>
   </defs>
   <circle class="cls-2" cx="300.58" cy="426.45" r="264.61"/>
-  <circle class="cls-3" cx="182.58" cy="426.45" r="32.67"/>
+  <circle class="cls-3 right-eye" cx="182.58" cy="426.45" r="32.67"/>
   <circle class="cls-3" cx="418.58" cy="426.45" r="32.67"/>
   <path class="cls-1" d="m445.53,549.07c-35.61,39.79-87.35,64.83-144.95,64.83-57.6,0-109.34-25.04-144.95-64.83"/>
   <ellipse class="cls-3" cx="165.12" cy="226.45" rx="165.12" ry="96"/>
