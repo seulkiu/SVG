@@ -127,6 +127,35 @@
         <g mask="url(#eye-mask)"><circle class="eye-ball" cx="163.5" cy="145.92" r="13" fill="#333"/></g>
         
       </svg>
-      
+
+      <script>
+        (() => { //자동실행 되는 함수
+        const reactMonElem = document.querySelector('.react-mon');
+        const targetPos = { x:0, y:0 }; //마우스 위치 
+        const easeValue = 0.05;
+        const reactMonInfo = {
+            x:0,
+            y:0
+        };
+
+        window.addEventListener('mousemove', (e) => {
+            targetPos.x = e.clientX - innerWidth * 0.5;
+            targetPos.y = e.clientY - innerHeight * 0.5;
+        });
+
+        let dx;
+        let dy;
+        function render(){
+            dx = targetPos.x - reactMonInfo.x;
+            dy = targetPos.y - reactMonInfo.y;
+            reactMonInfo.x = reactMonInfo.x + dx * easeValue;
+            reactMonInfo.y = reactMonInfo.y + dy * easeValue;
+            reactMonElem.style.transform = `translate3d(${reactMonInfo.x}px, ${reactMonInfo.y}px, 0px)`;
+            requestAnimationFrame(render);
+        }
+
+        render();
+    })(); //괄호로 묶은 함수를 (); 실행하라
+      </script>
 </body>
 </html>
