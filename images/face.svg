@@ -25,7 +25,7 @@
         to { transform: scaleY(0.2);}
       }
       .right-eye{
-        transform-origin: center center ;
+        transform-origin: center 60%;
         animation: eye-ani 0.5s alternate infinite;
       }
 
